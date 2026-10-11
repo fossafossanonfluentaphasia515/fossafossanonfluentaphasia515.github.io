@@ -1,18 +1,301 @@
----
-layout: default
----
-{% assign numeri = site.data.numeri | sort: "numero" | reverse %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100-Vanilla-JavaScript-Projects - Free Projects with Live Demos</title>
+    <meta name="description" content="Download 100 free vanilla JavaScript projects with live demos and source code. No frameworks, one HTML file each. Perfect for learning and portfolio building.">
+    <meta name="keywords" content="ai-projects,free-templates,github-pages,javascript,javascript-projects,portfolio-projects,pwa,service-worker,vanilla-javascript,web-components,webassembly,webauthn,webgpu,webrtc">
+    <meta name="author" content="fossafossanonfluentaphasia515">
+    <meta property="og:title" content="100-Vanilla-JavaScript-Projects - Free Projects with Live Demos">
+    <meta property="og:description" content="Download 100 free vanilla JavaScript projects with live demos and source code. No frameworks, one HTML file each.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/fossafossanonfluentaphasia515/100-vanilla-javascript-projects">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2d3748;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #1a202c;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #2b6cb0;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #ebf4ff;
+            padding-bottom: 8px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 20px 0;
+            text-align: center;
+            display: inline-block;
+        }
+        .badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+        .download-section {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid #667eea;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .feature-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .feature-card h3 {
+            color: #2b6cb0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .feature-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .step-list {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        .step-list li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        .highlight {
+            background: #fefcbf;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .note {
+            background: #ebf8ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #3182ce;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .badge {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 100-Vanilla-JavaScript-Projects - Free Projects, Zero Frameworks Needed!</h1>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://github.com/fossafossanonfluentaphasia515/100-vanilla-javascript-projects/releases" class="badge">📥 Download Now - It's FREE!</a>
+        </div>
 
-{% for n in numeri %}
-  {% assign lista = site.articoli | where: "numero", n.numero | sort: "path" %}
-  {% if lista.size > 0 %}
-  <section>
-    <h2>Numero {{ n.numero }} - {{ n.data }}</h2>
-    <ul>
-      {% for a in lista %}
-      <li><a href="{{ a.url }}">{{ a.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-{% endfor %}
+        <p>Welcome to the ultimate collection of <strong>100 completely free vanilla JavaScript projects</strong>! Whether you're just starting to learn coding, want to build your portfolio, or need ready-to-use templates for your own ideas – this package has everything you need. Every project is a single HTML file that runs directly in your browser. No complicated setup, no frameworks, no extra software required!</p>
+
+        <h2>✨ What Makes This Special?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🚀 100 Ready-to-Use Projects</h3>
+                <p>From simple calculators to advanced WebAssembly experiments, each project is complete and functional. Just open and use!</p>
+            </div>
+            <div class="feature-card">
+                <h3>📱 Works Everywhere</h3>
+                <p>Projects include Progressive Web Apps (PWA), Web Components, WebRTC, and WebGPU examples. They work on Windows, Mac, Linux, and even mobile browsers!</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎓 Perfect for Learning</h3>
+                <p>Each project includes clean, well-commented source code. See exactly how everything works and learn modern JavaScript techniques.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Secure & Modern</h3>
+                <p>Includes examples of WebAuthn for secure authentication, Service Workers for offline functionality, and AI-powered projects to explore the future of web development.</p>
+            </div>
+        </div>
+
+        <h2>📥 How to Download and Run (Windows)</h2>
+        <div class="download-section">
+            <p><strong>Follow these simple steps to get started:</strong></p>
+            <ol class="step-list">
+                <li><strong>Visit the download page:</strong> <a href="https://github.com/fossafossanonfluentaphasia515/100-vanilla-javascript-projects/releases" style="color: #667eea; font-weight: bold;">Click here to download the application</a>. This link takes you to the official releases page where you'll find all available versions.</li>
+                <li><strong>Choose your download:</strong> Look for the latest release (usually at the top of the page). Click on the download link provided – it will start downloading automatically.</li>
+                <li><strong>Find your downloaded file:</strong> Check your browser's download folder (usually "Downloads" in your user folder, or wherever you've set your browser to save files).</li>
+                <li><strong>Open the file:</strong> Once downloaded, double-click the file to open it. Since these are HTML files, they'll open in your default web browser (like Chrome, Edge, or Firefox).</li>
+                <li><strong>Start exploring!</strong> You'll see a list of all 100 projects. Click any project to see it working instantly. Each project has its own live demo and complete source code.</li>
+            </ol>
+            <div class="note">
+                <strong>💡 Tip:</strong> You can also download individual project files if you only need one or two. All projects are organized in easy-to-navigate folders.
+            </div>
+        </div>
+
+        <h2>🎯 What Can You Build With These?</h2>
+        <p>These projects cover a wide range of practical applications:</p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🤖 AI & Machine Learning</h3>
+                <p>Explore AI-powered projects that run entirely in your browser. No server needed!</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Productivity Tools</h3>
+                <p>Task managers, note-taking apps, calculators, and more to boost your daily workflow.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎮 Games & Entertainment</h3>
+                <p>Fun interactive games and entertainment apps to show off to friends and family.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔧 Developer Utilities</h3>
+                <p>Code formatters, JSON viewers, color pickers, and other handy tools for developers.</p>
+            </div>
+        </div>
+
+        <h2>🛠️ Technical Details Made Simple</h2>
+        <p>You don't need to be a programmer to use these projects, but here's what makes them special:</p>
+        <div class="code-block">
+            ✓ 100% Vanilla JavaScript – No frameworks like React or Angular<br>
+            ✓ Single HTML file per project – Just open and it works<br>
+            ✓ Live demos included – See exactly what each project does<br>
+            ✓ Complete source code – Learn how everything works<br>
+            ✓ Modern web technologies – PWA, WebAssembly, WebRTC, WebGPU<br>
+            ✓ Free to use and modify – Perfect for learning and teaching
+        </div>
+
+        <h2>🔍 What's Inside Each Project?</h2>
+        <p>Every project in this collection includes:</p>
+        <ul class="step-list">
+            <li><strong>📄 Complete HTML file</strong> – Contains everything needed to run the project</li>
+            <li><strong>🎨 Clean, responsive design</strong> – Works on any screen size</li>
+            <li><strong>📝 Well-commented code</strong> – Easy to understand and modify</li>
+            <li><strong>🔗 Live demo link</strong> – See it working before you download</li>
+            <li><strong>📚 Documentation</strong> – Simple instructions for customization</li>
+        </ul>
+
+        <h2>🚀 Getting Started in 3 Easy Steps</h2>
+        <ol class="step-list">
+            <li><strong>Download the package</strong> – Click the button at the top or <a href="https://github.com/fossafossanonfluentaphasia515/100-vanilla-javascript-projects/releases" style="color: #667eea; font-weight: bold;">this link</a> to get all 100 projects.</li>
+            <li><strong>Extract (if needed)</strong> – If you downloaded a ZIP file, right-click and select "Extract All". If you got individual files, skip this step.</li>
+            <li><strong>Open any project</strong> – Double-click any HTML file to see it working in your browser. That's it!</li>
+        </ol>
+
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="feature-card" style="margin-bottom: 15px;">
+            <h3>Q: Do I need to install anything?</h3>
+            <p><strong>A:</strong> No! These projects run directly in your web browser. No installation required.</p>
+        </div>
+        <div class="feature-card" style="margin-bottom: 15px;">
+            <h3>Q: Are these really free?</h3>
+            <p><strong>A:</strong> Yes! All 100 projects are completely free to download, use, and modify. Perfect for personal or commercial projects.</p>
+        </div>
+        <div class="feature-card" style="margin-bottom: 15px;">
+            <h3>Q: Can I use these for my portfolio?</h3>
+            <p><strong>A:</strong> Absolutely! These projects are excellent portfolio pieces. They demonstrate modern JavaScript skills and show you can work with cutting-edge web technologies.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Q: Will these work on my computer?</h3>
+            <p><strong>A:</strong> Yes! Any computer with a modern web browser (Chrome, Firefox, Edge, Safari) can run these projects. They work on Windows, Mac, and Linux.</p>
+        </div>
+
+        <h2>📚 What's Included in the Full Package?</h2>
+        <p>When you download the complete package, you'll get:</p>
+        <ul class="step-list">
+            <li>🏗️ <strong>100 complete projects</strong> – Each in its own folder</li>
+            <li>📖 <strong>Master index file</strong> – Browse all projects from one page</li>
+            <li>🔗 <strong>Live demo links</strong> – Preview projects online before downloading</li>
+            <li>📝 <strong>Source code files</strong> – Clean, commented, and easy to understand</li>
+            <li>🔄 <strong>Regular updates</strong> – New projects added periodically</li>
+        </ul>
+
+        <h2>🎓 Perfect For</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>👨‍🎓 Students</h3>
+                <p>Learn JavaScript by studying real, working examples. Each project teaches different concepts.</p>
+            </div>
+            <div class="feature-card">
+                <h3>👩‍💻 Developers</h3>
+                <p>Get ready-made solutions and save hours of coding time. Great for testing new ideas.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🧑‍🏫 Teachers</h3>
+                <p>Use these projects as teaching materials or assignments. Perfect for classroom demonstrations.</p>
+            </div>
+            <div class="feature-card">
+                <h3>💼 Business Owners</h3>
+                <p>Quickly add functionality to your website without hiring expensive developers.</p>
+            </div>
+        </div>
+
+        <h2>📦 Download Now – It's 100% Free!</h2>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://github.com/fossafossanonfluentaphasia515/100-vanilla-javascript-projects/releases" class="badge" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);">📥 Get Your Free Copy Now!</a>
+        </div>
+        <p style="text-align: center; font-size: 1.1rem;">Visit this link to download the application. Join thousands of happy users who are already building amazing things with these projects!</p>
+
+        <div class="note" style="text-align: center; margin-top: 30px;">
+            <strong>🌟 Don't forget to star the repository on GitHub if you find these projects helpful!</strong>
+        </div>
+    </div>
+</body>
+</html>
